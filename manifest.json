@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Bionic Reading Extension",
+  "version": "1.0",
+  "description": "Transforms webpage text into bionic text to enhance reading comprehension.",
+  "icons": {
+    "16": "assets/icon.png",
+    "24": "assets/icon.png",
+    "32": "assets/icon.png",
+    "48": "assets/icon.png"
+  },
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_icon": {
+      "16": "assets/icon.png",
+      "24": "assets/icon.png",
+      "32": "assets/icon.png"
+    },
+    "default_title": "Bionic Reading Extension",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
